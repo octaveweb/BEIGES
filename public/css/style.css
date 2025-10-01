@@ -1,34 +1,37 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-@font-face {
-    font-family: font ;
-    src: url(/public/fonts/Ubuntu-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html,
-body{
+body {
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
-:root{
 
-    --light:#fff;
-    --dark:#000;
-    --font-logo:  "Shadows Into Light", cursive;
-     --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+:root {
+
+    --light: #fff;
+    --dark: #000;
+
+    --font-logo: "Shadows Into Light", cursive;
+    --font-pry:"Ubuntu", sans-serif;
+
+    --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
 }
-.hov-tag{
+
+.hov-tag {
     position: relative;
     /* background-color: #ff0000; */
 }
-.hov-tag::before{
+
+.hov-tag::before {
     content: "";
     height: 1.5px;
     width: 0%;
@@ -38,70 +41,77 @@ body{
     border-radius: 50px;
     transition: var(--animation-primary);
 }
-.hov-tag:hover::before{
+
+.hov-tag:hover::before {
     width: 100%;
 }
 
-#wrapper{
-    
-}
-nav{
+#wrapper {}
+
+nav {
     /* height: 10vh; */
     padding: 1.5vw 2vw;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: font;
+    font-family: var(--font-pry);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
 }
-nav .logo{
+
+nav .logo {
     font-size: 2vw;
     font-weight: 700;
     font-family: var(--font-logo);
 }
-nav ul{
+
+nav ul {
     display: flex;
     font-size: 1vw;
     list-style-type: none;
 }
-nav ul li{
+
+nav ul li {
     margin: 0 2em;
     cursor: pointer;
 }
 
-.section{
+.section {
     height: 100vh;
     width: 100%;
     /* background-color: red; */
     display: flex;
     align-items: center;
-    
+
 }
-.section h1{
+
+.section h1 {
     font-size: 22vw;
-    font-family: font;
+    font-family: var(--font-pry);
     position: relative;
     top: -9vw;
     left: 2vw;
     font-weight: 200;
 }
-.image-contener{
-   
+
+.image-contener {
+
     /* background-color: #000; */
     position: absolute;
     right: 15vw;
     top: 14vw;
 }
-.image-contener::selection{
+
+.image-contener::selection {
     background-color: transparent;
 }
+
 .image-contener img:nth-child(1),
 .image-contener img:nth-child(2),
-.image-contener img:nth-child(3){
+.image-contener img:nth-child(3) {
     position: relative;
     width: 20vw;
     display: inline;
@@ -110,70 +120,78 @@ nav ul li{
 
 }
 
-.image-contener img:nth-child(1){
+.image-contener img:nth-child(1) {
     width: 10vw;
     top: 1vw;
     z-index: 1;
 
 }
-.image-contener img:nth-child(2){
-       width: 11vw;
+
+.image-contener img:nth-child(2) {
+    width: 11vw;
     right: 1vw;
     top: 13vh;
     z-index: 2;
 
 }
-.image-contener img:nth-child(3){
+
+.image-contener img:nth-child(3) {
     width: 17vw;
     right: 2vw;
     top: 9vh;
     z-index: 2;
 }
 
-.image-contener img:hover{
+.image-contener img:hover {
     transform: scale(140%);
     z-index: 10;
 }
-.image-contener img:active{
+
+.image-contener img:active {
     transform: scale(50%);
-    
+
 }
-.content-left{
+
+.content-left {
     position: absolute;
     bottom: 8vw;
     left: 2vw;
-    font-family: font;
+    font-family: var(--font-pry);
 }
+
 .content-left div:nth-child(1),
-.content-left div:nth-child(2){
+.content-left div:nth-child(2) {
     line-height: 1.5vw;
     font-size: .8vw;
 }
-.content-left div:nth-child(1){
+
+.content-left div:nth-child(1) {
     margin-bottom: 1.5vw;
 }
-.content-left div:nth-child(2){
-}
 
-.bottom-bar{
+.content-left div:nth-child(2) {}
+
+.bottom-bar {
     /* height: 8vh; */
     padding: 1.5vw 2vw;
     width: 100%;
-  color: var(--dark);
+    color: var(--dark);
     display: flex;
-    justify-content:  space-between;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
     bottom: 0;
     left: 0;
-    font-family: font;
+    font-family: var(--font-pry);
 
 }
-.bottom-bar p{
+
+.bottom-bar p {
     font-family: var(--font-logo);
     font-size: 3vw;
 }
-.bottom-bar a{
+
+.bottom-bar a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,6 +200,7 @@ nav ul li{
     color: var(--dark);
     font-size: 1.5vw;
 }
-.bottom-bar a .material-symbols-outlined{
+
+.bottom-bar a .material-symbols-outlined {
     font-size: 1.5vw;
 }
