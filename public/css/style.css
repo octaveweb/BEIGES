@@ -45,8 +45,50 @@ body {
 .hov-tag:hover::before {
     width: 100%;
 }
+/* Loader */
+#loader{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 999;
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 2.604vw;
+    font-family: var(--font-pry);
+} 
+#loader_titel {
+    margin-right: 1vw;
+}
+.minimal-progress {
+    width: 0;
+    height: .2vw;
+    background: royalblue;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1vw;
+    
+}
 
-#wrapper {}
+.progress-line {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100px;
+    height: 100%;
+    background: #000000;
+    animation: progress-move 1s cubic-bezier(.7, 0, .3, 1) infinite;
+}
+
+@keyframes progress-move {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+
 
 nav {
     /* height: 10vh; */
