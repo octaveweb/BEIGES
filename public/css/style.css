@@ -21,7 +21,7 @@ body {
     --dark: #000;
 
     --font-logo: "Shadows Into Light", cursive;
-    --font-pry:"Ubuntu", sans-serif;
+    --font-pry: "Ubuntu", sans-serif;
 
     --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
 }
@@ -45,24 +45,28 @@ body {
 .hov-tag:hover::before {
     width: 100%;
 }
+
 /* Loader */
-#loader{
+#loader {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     z-index: 999;
     background-color: var(--dark);
     color: var(--light);
     font-size: 2.604vw;
     font-family: var(--font-pry);
-} 
+}
+
 #loader_titel {
     margin-right: 1vw;
 }
+
 .minimal-progress {
     width: 0;
     height: .2vw;
@@ -70,7 +74,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 1vw;
-    
+
 }
 
 .progress-line {
@@ -84,8 +88,13 @@ body {
 }
 
 @keyframes progress-move {
-    0% { left: -100%; }
-    100% { left: 100%; }
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 
@@ -140,8 +149,8 @@ nav ul li {
 }
 
 .image-contener {
-
-    /* background-color: #000; */
+    height: fit-content;
+    width: fit-content;
     position: absolute;
     right: 15vw;
     top: 14vw;
@@ -211,7 +220,9 @@ nav ul li {
     margin-bottom: 1.5vw;
 }
 
-.content-left div:nth-child(2) {}
+.content-left p {
+    font-weight: 200;
+}
 
 .bottom-bar {
     /* height: 8vh; */
@@ -245,4 +256,87 @@ nav ul li {
 
 .bottom-bar a .material-symbols-outlined {
     font-size: 1.5vw;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+    #loader_titel {
+        margin-right: 1vw;
+        font-size: 9vw;
+    }
+
+    .minimal-progress {
+        width: 0;
+        height: .7vw;
+    }
+
+    .progress-line {
+        width: 30px;
+    }
+
+
+nav .logo {
+    font-size: 7vw;
+}
+nav ul {
+    display: none;
+}
+
+
+
+    .image-contener {
+        right: 6vw;
+        top: 34vw;
+    }
+
+    .image-contener img:nth-child(1) {
+        width: 19vw;
+        top: 16vw;
+        right: -8vw;
+
+
+    }
+
+    .image-contener img:nth-child(2) {
+        width: 35vw;
+        right: -2vw;
+        top: 5vh;
+
+    }
+
+    .image-contener img:nth-child(3) {
+        width: 28vw;
+        right: 0;
+        top: 15vw;
+    }
+
+    .section h1 {
+        top: -61vw;
+    }
+
+    .content-left {
+        bottom: 45vw;
+        left: 2vw;
+    }
+
+    .content-left div:nth-child(1),
+    .content-left div:nth-child(2) {
+            line-height: 6vw;
+        font-size: 3vw;
+    }
+    .content-left div:nth-child(1) {
+    margin-bottom: 3vw;
+
+}
+    .bottom-bar {
+    padding: 10.5vw 2vw;
+}
+.bottom-bar p {
+    font-size: 7vw;
+}
+.bottom-bar a {
+    font-size: 4.5vw;
+ }
+ .bottom-bar a .material-symbols-outlined {
+    font-size: 5vw;
+}
 }
