@@ -314,7 +314,7 @@ nav ul {
     }
 
     .content-left {
-        bottom: 45vw;
+        bottom: 40vw;
         left: 2vw;
     }
 
@@ -328,7 +328,7 @@ nav ul {
 
 }
     .bottom-bar {
-    padding: 10.5vw 2vw;
+    bottom: 5%;
 }
 .bottom-bar p {
     font-size: 7vw;
